@@ -228,13 +228,13 @@ if __name__ == '__main__': #main function of the program
 	print('start processing...')
 
 	model = get_testing_model()
-	model.load_weights('./model/keras/model.h5')
+	model.load_weights('/content/Sitting-Posture-Recognition/model/keras/model.h5')
 
 	vi=False
 	if(vi == False):
 	    time.sleep(2)
 	    params, model_params = config_reader()
-	    canvas, position= process('./sample_images/straight_flip.jpg', params, model_params)
+	    canvas, position= process('/content/Sitting-Posture-Recognition/sample_images/straight_flip.jpg', params, model_params)
 	    #showimage(canvas)
 	    if (position == 1):
 	    	print("Hunchback")
