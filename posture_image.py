@@ -46,7 +46,7 @@ def process (input_image, params, model_params):
 	all_peaks = [] #To store all the key points which a re detected.
 	peak_counter = 0
 	
-	prinfTick(1) #prints time required till now.
+	#prinfTick(1) #prints time required till now.
 
 	for part in range(18):
 	    map_ori = heatmap_avg[:, :, part]
@@ -75,8 +75,8 @@ def process (input_image, params, model_params):
 	special_k = []
 	mid_num = 10
 
-	prinfTick(2) #prints time required till now.
-	print()
+	#prinfTick(2) #prints time required till now.
+	#print()
 	position = checkPosition(all_peaks) #check position of spine.
 	checkKneeling(all_peaks) #check whether kneeling oernot
 	checkHandFold(all_peaks) #check whether hands are folding or not.
@@ -225,7 +225,7 @@ def prinfTick(i): #Time calculation to keep a trackm of progress
 
 if __name__ == '__main__': #main function of the program
 	tic = time.time()
-	print('start processing...')
+	#print('start processing...')
 
 	model = get_testing_model()
 	model.load_weights('/content/Sitting-Posture-Recognition/model/keras/model.h5')
